@@ -1,3 +1,7 @@
+import SectionHeader from "../components/SectionHeader";
+import Check from "@/assets/check.svg";
+import { motion } from "framer-motion";
+
 const pricingTiers = [
   {
     title: "Free",
@@ -50,8 +54,74 @@ const pricingTiers = [
   },
 ];
 
-const Pricing = () => {
-  return null;
-};
-
-export default Pricing
+export default function Pricing() {
+  return (
+    <section className="container my-10">
+      <SectionHeader
+        parentClasses="items-center text-center"
+        main="Pricing"
+        mainClasses="text-6xl md:text-7xl"
+        p="Free forever. Upgrade for unlimited tasks, better security and exclusive features."
+        pClasses="max-w-sm md:max-w-md"
+      />
+      <ul className="flex items-center md:items-end justify-center flex-col md:flex-row gap-11 mt-10">
+        {pricingTiers.map((tier) => (
+          <li
+            key={tier.title}
+            className={`flex flex-col gap-4 px-9 py-10 rounded-3xl shadow-2xl md:max-w-72 ${
+              tier.inverse ? "bg-black text-gray-100" : "bg-white text-gray-900"
+            }`}
+          >
+            <div className="flex items-center justify-between text-xs text-gray-500 font-bold">
+              <span>{tier.title}</span>
+              {tier.popular && (
+                <motion.span
+                  animate={{
+                    backgroundPositionX: "100%",
+                  }}
+                  transition={{
+                    duration: 1,
+                    repeat: Infinity,
+                    ease: "linear",
+                    repeatType: "loop",
+                  }}
+                  className="tracking-wider border border-gray-800 px-3 py-2 rounded-lg
+                   bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)]
+                    [background-size:200%] text-transparent bg-clip-text font-medium"
+                >
+                  Popular
+                </motion.span>
+              )}
+            </div>
+            <span
+              className={`text-lg my-2 ${
+                tier.inverse ? "text-white" : "text-black"
+              }`}
+            >
+              <span className="text-4xl font-black">${tier.monthlyPrice}</span>
+              <span className="text-xs tracking-wider font-bold">/month</span>
+            </span>
+            <button
+              className={`py-2 rounded-xl font-sans font-medium hover:scale-105 active:scale-[98%] transition-transform ${
+                tier.inverse ? "bg-white text-black" : "bg-black text-white"
+              }`}
+            >
+              {tier.buttonText}
+            </button>
+            <ul>
+              {tier.features.map((feature) => (
+                <li
+                  key={feature}
+                  className="flex items-center gap-2 my-3 leading-5 font-sans text-lg"
+                >
+                  <Check className="h-7 w-auto" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}

@@ -3,11 +3,11 @@ import TiltedArrow from "@/assets/arrow-right.svg";
 import Menu from "@/assets/menu.svg";
 import Button from "../components/Button";
 
-const Header = () => {
+export default function Header(){
   return (
     <>
       <div id="top"></div>
-      <div className="hidden bg-black md:flex justify-center gap-3 py-3 text-xs">
+      <div className="hidden bg-black md:flex justify-center gap-3 py-3 text-xs lg:text-2xl z-10">
         <p className="text-gray-500 md:text-gray-400">
           Streamline your workflow and boost your productivity
         </p>
@@ -19,12 +19,12 @@ const Header = () => {
       <header className="sticky top-0 flex items-center px-12 py-2 md:px-24 md:py-2 justify-between backdrop-blur-sm bg-white/10 z-20">
         <a href="#top">
           <img
-            className="h-10 w-auto cursor-pointer active:scale-95 transition-transform hover:scale-105"
+            className="h-10 lg:h-14 w-auto cursor-pointer active:scale-95 transition-transform hover:scale-105"
             src={logo.src}
             alt="Logo"
           />
         </a>
-        <nav className="hidden md:flex items-center gap-5 text-gray-500 font-bold">
+        <nav className="hidden md:flex items-center gap-5 text-gray-500 font-bold lg:text-2xl">
           <a
             className="hover:text-black transition-colors active:scale-95"
             href="#about"
@@ -62,5 +62,3 @@ const Header = () => {
     </>
   );
 };
-
-export default Header;
