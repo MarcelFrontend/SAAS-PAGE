@@ -1,10 +1,12 @@
 import logo from "@/assets/logosaas.png";
 import TiltedArrow from "@/assets/arrow-right.svg";
 import Menu from "@/assets/menu.svg";
+import Button from "../components/Button";
 
 const Header = () => {
   return (
     <>
+      <div id="top"></div>
       <div className="hidden bg-black md:flex justify-center gap-3 py-3 text-xs">
         <p className="text-gray-500 md:text-gray-400">
           Streamline your workflow and boost your productivity
@@ -14,9 +16,15 @@ const Header = () => {
           <TiltedArrow className="h-4 w-auto group-hover:-rotate-45 transition-transform" />
         </button>
       </div>
-      <header className="sticky top-0 flex items-center px-12 py-2 md:px-24 md:py-5 justify-between backdrop-blur bg-white/10">
-        <img className="h-10 w-auto" src={logo.src} alt="Logo" />
-        <nav className="hidden md:flex items-center gap-5 text-gray-500">
+      <header className="sticky top-0 flex items-center px-12 py-2 md:px-24 md:py-2 justify-between backdrop-blur-sm bg-white/10 z-20">
+        <a href="#top">
+          <img
+            className="h-10 w-auto cursor-pointer active:scale-95 transition-transform hover:scale-105"
+            src={logo.src}
+            alt="Logo"
+          />
+        </a>
+        <nav className="hidden md:flex items-center gap-5 text-gray-500 font-bold">
           <a
             className="hover:text-black transition-colors active:scale-95"
             href="#about"
@@ -47,11 +55,9 @@ const Header = () => {
           >
             Help
           </a>
-          <button className="px-4 py-1 bg-black text-white rounded-lg ml-2 border-2 border-black tracking-tight hover:bg-white hover:text-black active:translate-y-0.5 duration-300">
-            Get for free
-          </button>
+          <Button text={"Get for free"} />
         </nav>
-        <Menu className="md:hidden h-8 w-auto text-black"/>
+        <Menu className="md:hidden h-8 w-auto text-black" />
       </header>
     </>
   );
