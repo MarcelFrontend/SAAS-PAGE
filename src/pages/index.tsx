@@ -29,3 +29,4 @@ const Home = () => {
 
 export default Home;
 // */node_modules,*/.next
+// ciemny motyw, small hero items-center, also pt-5 text w każdej sekcji trochę za mały, więcej gapu przy small header fixed??

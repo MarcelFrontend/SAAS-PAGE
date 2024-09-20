@@ -3,11 +3,13 @@ import TiltedArrow from "@/assets/arrow-right.svg";
 import Menu from "@/assets/menu.svg";
 import Button from "../components/Button";
 
-export default function Header(){
+export default function Header() {
+  const linkClasses = "hover:text-black dark:hover:text-white  transition-colors active:scale-95";
   return (
     <>
       <div id="top"></div>
-      <div className="hidden bg-black md:flex justify-center gap-3 py-3 text-xs lg:text-2xl z-10">
+      {/* Todo kolor tła do poprawy */}
+      <div className="hidden bg-black dark:bg-[#112A85] md:flex justify-center gap-3 py-3 text-xs lg:text-2xl z-10">
         <p className="text-gray-500 md:text-gray-400">
           Streamline your workflow and boost your productivity
         </p>
@@ -16,7 +18,7 @@ export default function Header(){
           <TiltedArrow className="h-4 w-auto group-hover:-rotate-45 transition-transform" />
         </button>
       </div>
-      <header className="sticky top-0 flex items-center px-12 py-2 md:px-24 md:py-2 justify-between backdrop-blur-sm bg-white/10 z-20">
+      <header className="sticky -top-0.5 flex items-center px-12 py-2 md:px-24 md:py-2 justify-between backdrop-blur-sm bg-white/10 dark:bg-[rgba(17,42,133,0.7)] z-20">
         <a href="#top">
           <img
             className="h-10 lg:h-14 w-auto cursor-pointer active:scale-95 transition-transform hover:scale-105"
@@ -24,35 +26,20 @@ export default function Header(){
             alt="Logo"
           />
         </a>
-        <nav className="hidden md:flex items-center gap-5 text-gray-500 font-bold lg:text-2xl">
-          <a
-            className="hover:text-black transition-colors active:scale-95"
-            href="#about"
-          >
+        <nav className="hidden md:flex items-center gap-5 text-gray-500 dark:text-gray-400 font-bold lg:text-2xl">
+          <a className={linkClasses} href="#about">
             About
           </a>
-          <a
-            className="hover:text-black transition-colors active:scale-95"
-            href="#features"
-          >
+          <a className={linkClasses} href="#features">
             Features
           </a>
-          <a
-            className="hover:text-black transition-colors active:scale-95"
-            href="#Customers"
-          >
+          <a className={linkClasses} href="#Customers">
             Customers
           </a>
-          <a
-            className="hover:text-black transition-colors active:scale-95"
-            href="#updates"
-          >
+          <a className={linkClasses} href="#updates">
             Updates
           </a>
-          <a
-            className="hover:text-black transition-colors active:scale-95"
-            href="#help"
-          >
+          <a className={linkClasses} href="#help">
             Help
           </a>
           <Button text={"Get for free"} />
@@ -61,4 +48,4 @@ export default function Header(){
       </header>
     </>
   );
-};
+}

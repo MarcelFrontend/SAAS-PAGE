@@ -18,22 +18,23 @@ export default function Hero() {
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
   return (
-    <section ref={sectionRef} className="relative lg:-top-12 overflow-x-hidden mb-14">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] -z-10 pointer-events-none"></div>
-      <div className="container md:flex items-center">
-        <div className="flex items-center md:items-start md:text-start md:justify-center flex-col gap-4 lg:gap-6 text-black">
+    <section ref={sectionRef} className="relative lg:-top-12 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] dark:bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#000e41,#0F172A_100%)] -z-10 pointer-events-none"></div>
+      <div className="container md:flex items-center ">
+        <div className="flex items-center md:items-start md:text-start md:justify-center flex-col gap-4 lg:gap-6 text-black pt-7 md:pt-0">
           <SectionHeader
-            parentClasses="md:items-start md:text-start md:justify-center gap-4 lg:gap-6"
+            parentClasses="items-center text-center md:items-start md:text-start md:justify-center gap-4 lg:gap-6"
             small="Version 2.0 is here"
+            smallClasses=""
             main="Pathway to productivity"
-            mainClasses="max-w-xs md:max-w-md lg:max-w-3xl sm:text-5xl md:text-7xl lg:text-9xl"
+            mainClasses="max-w-8xl text-5xl md:max-w-md lg:max-w-3xl sm:text-5xl md:text-7xl lg:text-9xl"
             p="Celebrate the joy of accomplishment with an app design to track your
         progress, motivate your efforts and clebrate your successes."
-            pClasses="max-w-[18rem] md:max-w-[26rem] lg:max-w-lg lg:text-2xl"
+            pClasses="max-w-[20rem] md:max-w-[26rem] lg:max-w-lg lg:text-2xl"
           />
           <div className="flex gap-10 lg:text-2xl">
             <Button text={"Get for free"} />
-            <button className="flex items-center gap-1.5 group active:translate-y-0.5 transition-transform border-2 border-black px-2.5 rounded-lg hover:text-white transition-colors">
+            <button className="flex items-center gap-1.5 group active:translate-y-0.5 transition-transform border-2 border-black dark:border-gray-600 px-2.5 rounded-lg dark:text-gray-200 hover:text-white dark:hover:text-white transition-colors">
               Learn more
               <Arrow className="h-4 md:h-6 w-auto group-hover:-rotate-45 transition-transform" />
             </button>

@@ -98,7 +98,7 @@ function TestimonialColumn({ testimonials, duration, classes }: TestimonialsType
     >
       {[...testimonials, ...testimonials].map((testimonial) => (
         <li
-          className="max-w-xs flex items-start justify-center flex-col gap-4 p-10 shadow-[0_0_15px_1px_rgba(0,0,0,0.1)] rounded-3xl"
+          className="max-w-xs flex items-start justify-center flex-col gap-4 p-10 shadow-[0_0_15px_1px_rgba(0,0,0,0.1)] dark:shadow-[0_5px_10px_1px_rgba(100,100,175,.3)] rounded-3xl dark:bg-slate-800"
           key={testimonial.name}
         >
           <p>{testimonial.text}</p>
@@ -132,7 +132,7 @@ export default function Testimonials() {
         p="From intuitive design to powerful features, our app has become an essential tool for users around the world."
         pClasses="max-w-xs md:max-w-md lg:max-w-lg lg:text-2xl lg:leading-6"
       />
-      <div className="h-[40rem] flex items-center justify-center gap-10 overflow-y-hidden mt-14 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] text-black">
+      <div className="h-[40rem] flex items-center justify-center gap-10 overflow-y-hidden mt-14 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] text-black dark:text-white">
         <TestimonialColumn testimonials={firstColumn} />
         <TestimonialColumn testimonials={secondColumn} duration={15} classes="hidden md:flex" />
         <TestimonialColumn testimonials={thirdColumn} duration={14} classes="hidden lg:flex"/>

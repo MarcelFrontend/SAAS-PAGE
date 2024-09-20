@@ -68,11 +68,13 @@ export default function Pricing() {
         {pricingTiers.map((tier) => (
           <li
             key={tier.title}
-            className={`flex flex-col gap-4 px-9 py-10 rounded-3xl shadow-2xl md:max-w-72 ${
-              tier.inverse ? "bg-black text-gray-100" : "bg-white text-gray-900"
+            className={`flex flex-col gap-4 px-9 py-10 rounded-3xl shadow-2xl md:max-w-72 hover:-translate-y-5 transition-all hover:shadow-[0px_0px_10px_gray] duration-300 ${
+              tier.inverse
+                ? "bg-black text-gray-100 dark:text-white"
+                : "bg-white dark:bg-slate-800 dark:text-white text-gray-900"
             }`}
           >
-            <div className="flex items-center justify-between text-xs text-gray-500 font-bold">
+            <div className="flex items-center justify-between text-xs text-gray-500 dark:text-white font-bold">
               <span>{tier.title}</span>
               {tier.popular && (
                 <motion.span
@@ -95,15 +97,17 @@ export default function Pricing() {
             </div>
             <span
               className={`text-lg my-2 ${
-                tier.inverse ? "text-white" : "text-black"
+                tier.inverse ? "text-white" : "text-black dark:text-gray-400"
               }`}
             >
               <span className="text-4xl font-black">${tier.monthlyPrice}</span>
               <span className="text-xs tracking-wider font-bold">/month</span>
             </span>
             <button
-              className={`py-2 rounded-xl font-sans font-medium hover:scale-105 active:scale-[98%] transition-transform ${
-                tier.inverse ? "bg-white text-black" : "bg-black text-white"
+              className={`py-2 rounded-xl font-sans hover:scale-105 active:scale-[98%] transition-transform ${
+                tier.inverse
+                  ? "bg-white dark:bg-slate-800 text-black dark:text-white font-black"
+                  : "bg-black text-white font-medium "
               }`}
             >
               {tier.buttonText}

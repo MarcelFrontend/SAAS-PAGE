@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 export default function LogoTicker() {
   const logos = [AcmeLogo, ApexLogo, CeleLogo, EchoLogo, PulseLogo, QuantLogo];
   return (
-    <div className="container my-10 overflow-x-hidden">
+    <div className="container py-24 lg:-mt-12 overflow-x-hidden">
       <div className="flex flex-1 [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
         <motion.div
           initial={{ translateX: "0%" }}
@@ -20,10 +20,14 @@ export default function LogoTicker() {
             ease: "linear",
             duration: 30,
           }}
-          className="flex flex-none gap-6 pr-6 md:gap-14 md:pr-14 -translate-x-1/2"
+          className="flex flex-none gap-6 pr-6 md:gap-14 md:pr-14 dark:md:gap-16 dark:md:pr-16 -translate-x-1/2 dark:bg-gray-600 dark:py-4"
         >
-          {[...logos, ...logos].map((logo,index) => (
-            <img key={logo.src+index} src={logo.src} className="h-6 md:h-9 w-auto" />
+          {[...logos, ...logos].map((logo, index) => (
+            <img
+              key={logo.src + index}
+              src={logo.src}
+              className="h-6 dark:h-7 md:h-9 dark:md:h-10 w-auto"
+            />
           ))}
         </motion.div>
       </div>
