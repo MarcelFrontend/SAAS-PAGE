@@ -5,7 +5,6 @@ import SocialIn from "@/assets/social-linkedin.svg";
 import SocialPin from "@/assets/social-pin.svg";
 import SocialYt from "@/assets/social-youtube.svg";
 
-const socialLinks = [SocialX, SocialIns, SocialIn, SocialPin, SocialYt];
 
 export default function Footer() {
   const socialStyles =
