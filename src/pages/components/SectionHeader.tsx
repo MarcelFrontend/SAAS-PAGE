@@ -25,7 +25,7 @@ export default function SectionHeader({
     >
       {small && (
         <span
-          className={`tracking-tight text-xs border border-gray-300 px-2.5 py-1.5 mb-8 rounded-md ${smallClasses}`}
+          className={`tracking-tight text-xs border border-gray-300 px-2.5 py-1.5 mb-4 rounded-md ${smallClasses}`}
         >
           {small}
         </span>
