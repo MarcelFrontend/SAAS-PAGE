@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Header() {
   const linkClasses =
-    "md:hover:text-black md:dark:hover:text-white hover:text-gray-950 transition-colors active:scale-95 transition-colors duration-700";
+    "md:hover:text-black md:dark:hover:text-white hover:text-gray-950 bg-gray-600/25 px-2 py-1 rounded-lg md:bg-transparent md:p-0 transition-colors active:scale-95 transition-colors duration-700";
   const [showMenu, setShowMenu] = useState(false);
   return (
     <>
@@ -35,17 +35,28 @@ export default function Header() {
         <nav
           className={`${
             showMenu
-              ? "flex flex-col gap-2 absolute right-3 top-16 bg-white dark:bg-blue-950 shadow-md border-2 border-black px-2 py-3 rounded-xl transition-all text-[11px] border-b"
+              ? "flex flex-col gap-4 absolute right-3 top-16 bg-white dark:bg-blue-950 pr-2 md:pr-0 shadow-md border-2 border-black py-3 rounded-xl transition-all text-[14px]"
               : "hidden"
-          } md:flex items-center md:gap-5 text-gray-500 dark:text-gray-400 transition-colors duration-700 font-bold lg:text-2xl `}
+          } md:flex items-center md:gap-5 text-gray-600 dark:text-gray-300 transition-colors duration-700 font-bold lg:text-2xl
+                
+            `}
         >
-          <a className={linkClasses} href="#productShowcase">
+          <a
+            className={linkClasses}
+            href="#productShowcase"
+          >
             Features
           </a>
-          <a className={linkClasses} href="#pricing">
+          <a
+            className={linkClasses}
+            href="#pricing"
+          >
             Pricing
           </a>
-          <a className={linkClasses} href="#testimonials">
+          <a
+            className={linkClasses}
+            href="#testimonials"
+          >
             Customers
           </a>
           <Button text={"Get for free"} />

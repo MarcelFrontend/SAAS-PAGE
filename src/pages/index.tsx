@@ -31,7 +31,8 @@ const Home = () => {
       <Footer />
       <button
         onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
-        className="sticky bottom-5 left-[84%] sm:left-[90%] md:left-[93%] lg:left-[95%] bg-yellow-500/50 dark:bg-blue-700 transition-colors duration-100 text-2xl md:text-3xl rounded-lg px-3 dark:px-2 md:px-2.5 py-2"
+        className="sticky bottom-5 left-[84%] sm:left-[90%] md:left-[93%] lg:left-[95%] bg-gray-300 dark:bg-blue-400 transition-colors duration-100 text-2xl md:text-3xl rounded-lg px-3 
+        dark:px-[7px] md:px-[11px] dark:md:px-[7.5px] lg:px-[12px] py-2"
       >
         {currentTheme === "dark" ? (
           <Sun className="h-7 md:h-9 lg:h-12 w-auto" />
