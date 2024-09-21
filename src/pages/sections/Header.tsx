@@ -35,9 +35,9 @@ export default function Header() {
         <nav
           className={`${
             showMenu
-              ? "flex flex-col absolute right-14 top-16 bg-white dark:bg-blue-950 shadow-md border-2 border-black px-2 py-3 rounded-xl transition-all"
+              ? "flex flex-col gap-2 absolute right-3 top-16 bg-white dark:bg-blue-950 shadow-md border-2 border-black px-2 py-3 rounded-xl transition-all text-[11px] border-b"
               : "hidden"
-          } md:flex items-center gap-5 text-gray-500 dark:text-gray-400 transition-colors duration-700 font-bold lg:text-2xl `}
+          } md:flex items-center md:gap-5 text-gray-500 dark:text-gray-400 transition-colors duration-700 font-bold lg:text-2xl `}
         >
           <a className={linkClasses} href="#productShowcase">
             Features
