@@ -3,14 +3,15 @@ import TiltedArrow from "@/assets/arrow-right.svg";
 import Menu from "@/assets/menu.svg";
 import Button from "../components/Button";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Header() {
   const linkClasses =
-    "hover:text-black dark:hover:text-white  transition-colors active:scale-95 transition-colors duration-700";
+    "md:hover:text-black md:dark:hover:text-white hover:text-gray-950 transition-colors active:scale-95 transition-colors duration-700";
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <>
       <div id="top"></div>
-      {/* Todo kolor tła do poprawy */}
       <div className="hidden bg-black dark:bg-[#112A85] md:flex justify-center gap-3 py-3 text-xs lg:text-2xl z-10 transition-colors duration-700">
         <p className="text-gray-500 md:text-gray-400">
           Streamline your workflow and boost your productivity
@@ -31,7 +32,13 @@ export default function Header() {
             loading="lazy"
           />
         </a>
-        <nav className="hidden md:flex items-center gap-5 text-gray-500 dark:text-gray-400 transition-colors duration-700 font-bold lg:text-2xl">
+        <nav
+          className={`${
+            showMenu
+              ? "flex flex-col absolute right-14 top-16 bg-white dark:bg-blue-950 shadow-md border-2 border-black px-2 py-3 rounded-xl transition-all"
+              : "hidden"
+          } md:flex items-center gap-5 text-gray-500 dark:text-gray-400 transition-colors duration-700 font-bold lg:text-2xl `}
+        >
           <a className={linkClasses} href="#productShowcase">
             Features
           </a>
@@ -43,7 +50,10 @@ export default function Header() {
           </a>
           <Button text={"Get for free"} />
         </nav>
-        <Menu className="md:hidden h-8 w-auto text-black" />
+        <Menu
+          onClick={() => setShowMenu(!showMenu)}
+          className="md:hidden h-8 w-auto text-black"
+        />
       </header>
     </>
   );

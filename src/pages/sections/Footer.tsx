@@ -26,32 +26,32 @@ export default function Footer() {
       </div>
       <ul className="flex gap-4">
         <li className="">
-          <a href="">
+          <a href="#footer">
             <SocialX className={socialStyles} />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#footer">
             <SocialIns className={socialStyles} />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#footer">
             <SocialIn className={socialStyles} />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#footer">
             <SocialPin className={socialStyles} />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#footer">
             <SocialYt className={socialStyles} />
           </a>
         </li>
       </ul>
-      <span className="max-w-xs md:max-w-none text-center text-xs ">
+      <span id="footer" className="max-w-xs md:max-w-none text-center text-xs ">
         © 2024 Your Company, Inc. All rights reserved.
       </span>
     </footer>
