@@ -56,7 +56,7 @@ const pricingTiers = [
 
 export default function Pricing() {
   return (
-    <section className="container my-10">
+    <section className="container my-10" id="pricing">
       <SectionHeader
         parentClasses="items-center text-center"
         main="Pricing"

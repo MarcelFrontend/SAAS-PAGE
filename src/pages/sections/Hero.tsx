@@ -42,6 +42,7 @@ export default function Hero() {
         </div>
         <div className="relative flex justify-center md:block">
           <motion.img
+            loading="eager"
             width={280}
             height={280}
             alt=""
@@ -52,6 +53,7 @@ export default function Hero() {
             }}
           />
           <motion.img
+            loading="eager"
             src={heroImg.src}
             className="relative w-52 h-52 md:translate-x-0 -top-10 md:-top-4 md:max-w-9xl md:h-full md:w-auto lg:max-w-3xl lg:max-h-xl md:-right-44 -z-10 pointer-events-none"
             initial={{ translateY: 0 }}
@@ -64,6 +66,7 @@ export default function Hero() {
             }}
           />
           <motion.img
+            loading="eager"
             alt=""
             width={280}
             height={280}

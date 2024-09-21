@@ -9,6 +9,7 @@ import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
 import SectionHeader from "../components/SectionHeader";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -103,7 +104,9 @@ function TestimonialColumn({ testimonials, duration, classes }: TestimonialsType
         >
           <p>{testimonial.text}</p>
           <div className="flex items-center gap-1.5">
-            <img
+            <Image
+              width={11}
+              height={11}
               src={testimonial.imageSrc}
               alt={`${testimonial.name}'s profile picture`}
               className="h-11 w-auto"
@@ -123,7 +126,7 @@ function TestimonialColumn({ testimonials, duration, classes }: TestimonialsType
 
 export default function Testimonials() {
   return (
-    <section className="container my-20">
+    <section id="testimonials" className="container my-20">
       <SectionHeader
         parentClasses="items-center text-center"
         small="Testimonials"
@@ -134,8 +137,16 @@ export default function Testimonials() {
       />
       <div className="h-[40rem] flex items-center justify-center gap-10 overflow-y-hidden mt-14 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] text-black dark:text-white">
         <TestimonialColumn testimonials={firstColumn} />
-        <TestimonialColumn testimonials={secondColumn} duration={15} classes="hidden md:flex" />
-        <TestimonialColumn testimonials={thirdColumn} duration={14} classes="hidden lg:flex"/>
+        <TestimonialColumn
+          testimonials={secondColumn}
+          duration={15}
+          classes="hidden md:flex"
+        />
+        <TestimonialColumn
+          testimonials={thirdColumn}
+          duration={14}
+          classes="hidden lg:flex"
+        />
       </div>
     </section>
   );

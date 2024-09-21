@@ -38,11 +38,13 @@ export default function CallToAction() {
           src={star.src}
           className="absolute h-96 w-auto -left-[28rem] -top-72"
           style={{ translateY }}
+          loading="lazy"
         />
         <motion.img
           src={spring.src}
           className="absolute h-96 w-auto -right-[28rem] -bottom-48"
           style={{ translateY }}
+          loading="lazy"
         />
       </div>
     </section>

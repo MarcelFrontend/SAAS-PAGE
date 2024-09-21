@@ -2,6 +2,7 @@ import logo from "@/assets/logosaas.png";
 import TiltedArrow from "@/assets/arrow-right.svg";
 import Menu from "@/assets/menu.svg";
 import Button from "../components/Button";
+import Image from "next/image";
 
 export default function Header() {
   const linkClasses =
@@ -21,27 +22,24 @@ export default function Header() {
       </div>
       <header className="sticky -top-0.5 flex items-center px-12 py-2 md:px-24 md:py-2 justify-between backdrop-blur-sm bg-white/10 dark:bg-[rgba(17,42,133,0.7)] transition-colors duration-700 z-20">
         <a href="#top">
-          <img
+          <Image
+            width={10}
+            height={10}
             className="h-10 lg:h-14 w-auto cursor-pointer active:scale-95 transition-transform hover:scale-105"
             src={logo.src}
             alt="Logo"
+            loading="lazy"
           />
         </a>
         <nav className="hidden md:flex items-center gap-5 text-gray-500 dark:text-gray-400 transition-colors duration-700 font-bold lg:text-2xl">
-          <a className={linkClasses} href="#about">
-            About
-          </a>
-          <a className={linkClasses} href="#features">
+          <a className={linkClasses} href="#productShowcase">
             Features
           </a>
-          <a className={linkClasses} href="#Customers">
+          <a className={linkClasses} href="#pricing">
+            Pricing
+          </a>
+          <a className={linkClasses} href="#testimonials">
             Customers
-          </a>
-          <a className={linkClasses} href="#updates">
-            Updates
-          </a>
-          <a className={linkClasses} href="#help">
-            Help
           </a>
           <Button text={"Get for free"} />
         </nav>

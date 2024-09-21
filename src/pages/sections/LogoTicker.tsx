@@ -20,13 +20,14 @@ export default function LogoTicker() {
             ease: "linear",
             duration: 30,
           }}
-          className="flex flex-none gap-6 pr-6 md:gap-14 md:pr-14 dark:md:gap-16 dark:md:pr-16 -translate-x-1/2 dark:bg-gray-600 dark:py-4 transition-colors duration-700"
+          className="flex flex-none gap-6 pr-6 md:gap-14 md:pr-14 dark:md:gap-16 dark:md:pr-16 -translate-x-1/2 dark:bg-gray-400 dark:py-4 transition-colors duration-700"
         >
           {[...logos, ...logos].map((logo, index) => (
             <img
               key={logo.src + index}
               src={logo.src}
               className="h-6 dark:h-7 md:h-9 dark:md:h-10 w-auto transition-all duration-700"
+              loading="lazy"
             />
           ))}
         </motion.div>

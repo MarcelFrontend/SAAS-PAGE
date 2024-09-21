@@ -17,6 +17,7 @@ export default function ProductShowcase() {
 
   return (
     <section
+      id="productShowcase"
       ref={sectionRef}
       className="w-screen bg-gradient-to-b dark:from-gray-900 from-[#fff] to-[#D2DCFF] dark:to-[#000e41] overflow-hidden transition-colors duration-700"
     >
@@ -29,11 +30,12 @@ export default function ProductShowcase() {
           p="Effortlessly turn your ideas into a fully functional, responsive, SaaS website in just minutes with this template."
           pClasses="max-w-sm lg:max-w-lg"
         />
-        <div className="relative">
+        <div className="relative text-black">
           <img
             src={product.src}
             alt="Image of our product"
             className="w-auto h-60 md:h-[35rem] lg:h-[45rem]"
+            loading="lazy"
           />
           <motion.img
             src={pyramid.src}
