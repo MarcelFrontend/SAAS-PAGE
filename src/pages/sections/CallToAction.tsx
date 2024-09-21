@@ -19,7 +19,7 @@ export default function CallToAction() {
   return (
     <section
       ref={sectionRef}
-      className="w-screen flex items-center flex-col gap-7 pt-20 md:pt-32 pb-20 md:pb-52 mt-20 overflow-hidden bg-gradient-to-b dark:from-[#0F172A] from-white to-[#D2DCFF] dark:to-[#000e41]"
+      className="w-screen flex items-center flex-col gap-7 pt-20 md:pt-32 pb-20 md:pb-52 mt-20 overflow-hidden bg-gradient-to-b dark:from-[#0F172A] from-white to-[#D2DCFF] dark:to-[#000e41] transition-colors duration-700"
     >
       <SectionHeader
         parentClasses="text-center items-center"
@@ -30,7 +30,7 @@ export default function CallToAction() {
       />
       <div className="relative flex gap-10 lg:text-2xl">
         <Button text={"Get for free"} />
-        <button className="flex items-center gap-1.5 group active:translate-y-0.5 border-2 border-black dark:border-gray-600 px-2.5 rounded-lg transition-colors text-black dark:text-white">
+        <button className="flex items-center gap-1.5 group active:translate-y-0.5 border-2 border-black dark:border-gray-600 px-2.5 rounded-lg text-black dark:text-white transition-colors duration-700">
           Learn more
           <Arrow className="h-4 md:h-6 w-auto group-hover:-rotate-45 transition-transform" />
         </button>

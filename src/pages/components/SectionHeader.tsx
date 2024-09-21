@@ -21,7 +21,7 @@ export default function SectionHeader({
 }: headerProps) {
   return (
     <div
-      className={`flex flex-col text-black dark:text-gray-400 dark:md:text-gray-300 ${parentClasses}`}
+      className={`flex flex-col text-black dark:text-gray-400 dark:md:text-gray-300 transition-colors duration-300 ${parentClasses}`}
     >
       {small && (
         <span
@@ -31,7 +31,7 @@ export default function SectionHeader({
         </span>
       )}
       <span
-        className={`text-5xl tracking-tight font-bold bg-gradient-to-b dark:from-white from-black dark:to-[#3d5cc1] to-[#001E80] text-transparent bg-clip-text pb-1 md:pb-2 ${mainClasses}`}
+        className={`text-5xl tracking-tight font-bold bg-gradient-to-b dark:from-white from-black dark:to-[#3d5cc1] to-[#001E80] text-transparent bg-clip-text pb-1 md:pb-2 transition-colors duration-75 ${mainClasses}`}
       >
         {main}
       </span>

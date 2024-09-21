@@ -18,7 +18,7 @@ export default function ProductShowcase() {
   return (
     <section
       ref={sectionRef}
-      className="w-screen bg-gradient-to-b dark:from-gray-900 from-[#fff] to-[#D2DCFF] dark:to-[#000e41] overflow-hidden"
+      className="w-screen bg-gradient-to-b dark:from-gray-900 from-[#fff] to-[#D2DCFF] dark:to-[#000e41] overflow-hidden transition-colors duration-700"
     >
       <div className="container flex items-center justify-center flex-col gap-7 my-10">
         <SectionHeader

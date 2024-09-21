@@ -68,7 +68,7 @@ export default function Pricing() {
         {pricingTiers.map((tier) => (
           <li
             key={tier.title}
-            className={`flex flex-col gap-4 px-9 py-10 rounded-3xl shadow-2xl md:max-w-72 hover:-translate-y-5 transition-all hover:shadow-[0px_0px_10px_gray] duration-300 ${
+            className={`flex flex-col gap-4 px-9 py-10 rounded-3xl shadow-2xl md:max-w-72 hover:-translate-y-5 transition-all hover:shadow-[0px_0px_10px_gray] duration-300  ${
               tier.inverse
                 ? "bg-black text-gray-100 dark:text-white"
                 : "bg-white dark:bg-slate-800 dark:text-white text-gray-900"
